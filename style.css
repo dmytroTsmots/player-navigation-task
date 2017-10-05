@@ -1,0 +1,41 @@
+#rocket {
+  width: 50px;
+  height: 50px;
+  background: url(img/rocket.png) no-repeat;
+  background-size: contain;
+  -webkit-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+  -webkit-transition-property: left, top;
+  transition-property: left, top;
+  position: absolute;
+}
+
+#rocket.left {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+#rocket.right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+#rocket.top {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+#rocket.bottom {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.fire::before {
+  width: 10px;
+  height: 10px;
+  top: -22px;
+  left: 16px;
+  position: relative;
+  content: url(img/fire.png);
+}
+body {
+  background: url(img/space.png);
+  background-size: cover;
+}
